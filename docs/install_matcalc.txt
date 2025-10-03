@@ -1,0 +1,3 @@
+# Install the Libs
+
+uv add matcalc matgl seekpath crystal_toolkit

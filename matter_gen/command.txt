@@ -1,0 +1,99 @@
+for prevoskite generation
+
+mattergen-generate $RESULTS_PATH \
+--pretrained_name=mattergen_base \
+--batch_size=16 \
+--num_batches=1 \
+--properties_to_condition_on="[
+    'dft_bulk_modulus=50',
+    'dft_band_gap=1.55',
+    'dft_mag_density=0.01',
+    'ml_bulk_modulus=60',
+    'hhi_score=0.95',
+    'space_group=Pm-3m',
+    'energy_above_hull=0.05'
+]"
+
+This won't work because the model is not trained on these properties.
+
+But for single property generation, you can use the following commands:
+
+# For bulk modulus
+mattergen-generate $RESULTS_PATH/bulk_modulus \
+--pretrained-name=ml_bulk_modulus \
+--batch_size=16 \
+--num_batches=1 \
+--properties_to_condition_on="{'ml_bulk_modulus': 60}" \
+--diffusion_guidance_factor=2.0
+
+# For band gap
+mattergen-generate $RESULTS_PATH/band_gap \
+--pretrained-name=dft_band_gap \
+--batch_size=16 \
+--num_batches=1 \
+--properties_to_condition_on="{'dft_band_gap': 1.55}" \
+--diffusion_guidance_factor=2.0
+
+# For magnetic density
+mattergen-generate $RESULTS_PATH/mag_density \
+--pretrained-name=dft_mag_density \
+--batch_size=16 \
+--num_batches=1 \
+--properties_to_condition_on="{'dft_mag_density': 0.01}" \
+--diffusion_guidance_factor=2.0
+
+
+And For multiple properties
+
+# For chemical system and energy above hull
+mattergen-generate $RESULTS_PATH/chem_energy \
+--pretrained-name=chemical_system_energy_above_hull \
+--batch_size=16 \
+--num_batches=1 \
+--properties_to_condition_on="{'energy_above_hull': 0.05, 'chemical_system': 'YOUR_CHEMICAL_SYSTEM'}" \
+--diffusion_guidance_factor=2.0
+
+# For magnetic density and HHI score
+mattergen-generate $RESULTS_PATH/mag_hhi \
+--pretrained-name=dft_mag_density_hhi_score \
+--batch_size=16 \
+--num_batches=2 \
+--properties_to_condition_on="{'dft_mag_density': 0.01, 'hhi_score': 0.95}" \
+--diffusion_guidance_factor=2.0
+
+
+So for prevoskite generation, you can use the following commands:
+
+# For space_group
+
+mattergen-generate ./results/space_group_221 \
+--pretrained-name=space_group \
+--batch_size=5 \
+--num_batches=2 \
+--properties_to_condition_on="{'space_group': 221}" \
+--diffusion_guidance_factor=2.0
+
+
+mattergen-generate ./results/space_group_221   --pretrained-name=   --batch_size=5   --num_batches=2   --properties_to_condition_on="{'space_group': 221}"   --diffusion_guidance_factor=2.0
+
+
+
+
+# test 2
+
+mattergen-generate $RESULTS_PATH/mag_hhi --pretrained-name=dft_mag_density_hhi_score --batch_size=16 --num_batches=2 --properties_to_condition_on="{'dft_mag_density': 4.0, 'hhi_score': 1500}" --diffusion_guidance_factor=2.5
+
+
+mattergen-generate $RESULTS_PATH/eah --pretrained-name=chemical_system_energy_above_hull --batch_size=20 --num_batches=2 --properties_to_condition_on="{'chemical_system_energy_above_hull': 0}" --diffusion_guidance_factor=2.5
+
+mattergen-generate $RESULTS_PATH/bgapsem --pretrained-name=dft_band_gap --batch_size=20 --num_batches=1 --properties_to_condition_on="{'dft_band_gap': 1.0}" --diffusion_guidance_factor=2.5
+
+mattergen-generate $RESULTS_PATH/bandgap1.4b2 --pretrained-name=dft_band_gap --batch_size=20 --num_batches=2 --properties_to_condition_on="{'dft_band_gap': 1.2}" --diffusion_guidance_factor=2.0
+
+mattergen-generate $RESULTS_PATH/bandgap3.0 --pretrained-name=dft_band_gap --batch_size=20 --num_batches=1 --properties_to_condition_on="{'dft_band_gap': 2.0}" --diffusion_guidance_factor=2.0
+
+# chemical_system_energy_above_hull
+
+mattergen-generate $RESULTS_PATH/Li-S --pretrained-name=chemical_system_energy_above_hull --batch_size=16 --properties_to_condition_on="{'energy_above_hull': 0.05, 'chemical_system': 'Li-S'}" --diffusion_guidance_factor=2.0
+
+mattergen-generate $RESULTS_PATH/Ni-Fe-Mn-O --pretrained-name=chemical_system_energy_above_hull --batch_size=20 --num_batches=2 --properties_to_condition_on="{'energy_above_hull': 0.04, 'chemical_system': 'Ni-Fe-Mn-O'}" --diffusion_guidance_factor=2.0

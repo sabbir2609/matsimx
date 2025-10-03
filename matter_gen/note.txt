@@ -1,0 +1,27 @@
+
+for mattergen
+
+wget -qO- https://astral.sh/uv/install.sh | sh
+
+git clone https://github.com/microsoft/mattergen.git
+
+uv venv .venv --python 3.10
+source .venv/bin/activate
+
+cd mattergen
+
+uv pip install -e .
+
+if faied, try this 
+
+UV_HTTP_TIMEOUT=120 uv pip install -e .
+
+sudo apt install git-lfs
+git lfs --version
+
+export MODEL_NAME=mattergen_base
+export RESULTS_PATH=results/
+export OUTPUT_PATH="output/"
+
+mattergen-generate $RESULTS_PATH --pretrained-name=$MODEL_NAME --batch_size=16 --num_batches 1
+
