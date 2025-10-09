@@ -3,29 +3,21 @@
 ## For Linux/WSL (using uv)
 You can install the libraries with:
 ```
-uv add matcalc matgl seekpath crystal_toolkit
+pip install matcalc matgl seekpath crystal_toolkit
 ```
 
 ## For Windows (using conda)
-You can install the libraries with:
+Create a new conda environment:
 ```
-conda install -c conda-forge matcalc
-conda install -c dglteam dgl
-conda install -c conda-forge matgl  # depends on dgl
-conda install -c conda-forge seekpath
-Try:
-conda install conda-forge::crystal-toolkit
-if not working, try:
-pip install -U crystal_toolkit
+conda create -n matsim python=3.10
+conda activate matsim
+```
+Then install the libraries with:
+```
+pip install matcalc matgl seekpath crystal_toolkit
 ```
 
-Additionally, install JupyterLab and IPython kernel:
-```
-conda install jupyterlab ipykernel
-conda install -c conda-forge ipywidgets
-or with pip:
-pip install ipywidgets
-```
+NOTE: This is really difficult to get working on Windows. If you run into issues, consider using WSL instead.
 
 ## More Information
 1. [DGL Documentation](https://www.dgl.ai/pages/start.html)
