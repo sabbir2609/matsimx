@@ -14,7 +14,7 @@ uv pip install -e .
 
 if faied, try this 
 
-UV_HTTP_TIMEOUT=120 uv pip install -e .
+UV_HTTP_TIMEOUT=120 uv pip install -e . --link-mode=copy
 
 sudo apt install git-lfs
 git lfs --version
