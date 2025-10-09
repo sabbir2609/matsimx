@@ -1,0 +1,123 @@
+data_MnZn_1
+_audit_creation_date              2025-10-05
+_audit_creation_method            'Materials Studio'
+_symmetry_space_group_name_H-M    'R-3M'
+_symmetry_Int_Tables_number       166
+_symmetry_cell_setting            trigonal
+loop_
+_symmetry_equiv_pos_as_xyz
+  x,y,z
+  z,x,y
+  y,z,x
+  -y,-x,-z
+  -x,-z,-y
+  -z,-y,-x
+  -x,-y,-z
+  -z,-x,-y
+  -y,-z,-x
+  y,x,z
+  x,z,y
+  z,y,x
+_cell_length_a                    8.5881
+_cell_length_b                    8.5881
+_cell_length_c                    8.5881
+_cell_angle_alpha                 90.0360
+_cell_angle_beta                  90.0360
+_cell_angle_gamma                 90.0360
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_occupancy
+O19    O     0.23586  -0.48991   1.01452   0.00000  Uiso   1.00
+Fe0    Fe    0.50000  -0.50000   0.50000   0.00000  Uiso   1.00
+Fe1    Fe    0.50681  -0.74781   0.25219   0.00000  Uiso   1.00
+O20    O     0.74001  -0.76137   0.23863   0.00000  Uiso   1.00
+Zn50   Zn    1.12494  -0.37403   0.62597   0.00000  Uiso   1.00
+Fe3    Fe    1.00000  -0.00000   0.50000   0.00000  Uiso   1.00
+Fe5    Fe    0.75013   0.00000   0.24987   0.00000  Uiso   1.00
+Mn16   Mn    1.13320  -0.86680   1.13320   0.00000  Uiso   1.00
+O18    O     1.00765   0.00765   0.73176   0.00000  Uiso   1.00
+O21    O     0.51125  -0.26067   0.51125   0.00000  Uiso   1.00
+O33    O     0.73055  -0.26945   0.73055   0.00000  Uiso   1.00
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_site_symmetry_2
+_ccdc_geom_bond_type
+O19    Fe5     2.069   2_546 S
+O19    Fe3     2.031   3_545 S
+O19    Fe1     2.046   2_547 S
+O19    Zn50    2.052   6_647 S
+Fe0    Fe1     3.009   .     S
+Fe0    Fe1     3.009   2_546 S
+Fe0    Fe1     3.009   3_645 S
+Fe0    Fe1     3.009   4_556 S
+Fe0    Fe1     3.009   5_655 S
+Fe0    Fe1     3.009   6_646 S
+Fe0    O21     2.060   .     S
+Fe0    O21     2.060   2_546 S
+Fe0    O21     2.060   3_645 S
+Fe0    O21     2.060   4_556 S
+Fe0    O21     2.060   5_655 S
+Fe0    O21     2.060   6_646 S
+Fe1    Fe1     3.093   2_546 S
+Fe1    Fe1     3.093   3_645 S
+Fe1    Fe5     3.011   1_545 S
+Fe1    Fe5     3.011   8_655 S
+Fe1    Fe3     3.063   2_535 S
+Fe1    O20     2.010   .     S
+Fe1    O21     2.039   5_655 S
+Fe1    O21     2.039   6_646 S
+Fe1    O19     2.046   10_644 S
+Fe1    O19     2.046   3_635 S
+Fe1    O33     2.049   4_556 S
+O20    Fe5     2.054   8_655 S
+O20    Fe5     2.054   1_545 S
+O20    Zn50    2.011   5_755 S
+Zn50   O20     2.011   5_755 S
+Zn50   O21     2.034   4_656 S
+Zn50   O19     2.052   8_755 S
+Zn50   O19     2.052   6_746 S
+Fe3    Fe1     3.063   6_646 S
+Fe3    Fe1     3.063   3_755 S
+Fe3    Fe5     3.035   .     S
+Fe3    Fe5     3.035   3_655 S
+Fe3    Fe5     3.035   7_756 S
+Fe3    Fe5     3.035   9_656 S
+Fe3    O18     1.992   .     S
+Fe3    O18     1.992   4_666 S
+Fe3    O19     2.031   5_665 S
+Fe3    O19     2.031   2_556 S
+Fe3    O19     2.031   11_646 S
+Fe3    O19     2.031   8_755 S
+Fe5    Fe3     3.035   2_545 S
+Fe5    Fe1     3.011   1_565 S
+Fe5    Fe1     3.011   6_646 S
+Fe5    Fe5     3.036   8_665 S
+Fe5    Fe5     3.036   9_656 S
+Fe5    O20     2.054   1_565 S
+Fe5    O20     2.054   6_646 S
+Fe5    O19     2.069   5_665 S
+Fe5    O19     2.069   3_645 S
+Fe5    O18     2.087   2_545 S
+Fe5    O18     2.087   4_666 S
+Mn16   O18     2.067   5_756 S
+Mn16   O18     2.067   4_657 S
+Mn16   O18     2.067   6_747 S
+Mn16   O33     2.025   4_657 S
+O18    Fe5     2.087   7_756 S
+O18    Fe5     2.087   3_655 S
+O18    Mn16    2.067   4_567 S
+O21    Fe1     2.039   6_646 S
+O21    Fe1     2.039   5_655 S
+O21    Zn50    2.034   4_566 S
+O33    Fe1     2.049   6_646 S
+O33    Fe1     2.049   5_655 S
+O33    Fe1     2.049   4_556 S
+O33    Mn16    2.025   4_567 S
