@@ -99,26 +99,6 @@ mattergen-generate $RESULTS_PATH/Li-S --pretrained-name=chemical_system_energy_a
 mattergen-generate $RESULTS_PATH/Ni-Fe-Mn-O --pretrained-name=chemical_system_energy_above_hull --batch_size=20 --num_batches=2 --properties_to_condition_on="{'energy_above_hull': 0.04, 'chemical_system': 'Ni-Fe-Mn-O'}" --diffusion_guidance_factor=2.0
 
 # Wide band gap materials
-mattergen-generate output/bandgap4.0 --pretrained-name=dft_band_gap --batch_size=20 --num_batches=2 --properties_to_condition_on="{'dft_band_gap': 4.0}" --diffusion_guidance_factor=2.0
+mattergen-generate output/bandgap4.0b1 --pretrained-name=dft_band_gap --batch_size=20 --num_batches=2 --properties_to_condition_on="{'dft_band_gap': 4.0}" --diffusion_guidance_factor=2.0
 
-mattergen-generate output/bandgap3.5 --pretrained-name=dft_band_gap --batch_size=10 --num_batches=2 --properties_to_condition_on="{'dft_band_gap': 3.5}" --diffusion_guidance_factor=2.2
-
-# experiment with 2D materials with band gap ~4 eV, max atoms 30, filter for 2D materials and energy above hull <0.1 eV/atom
-
-mattergen-generate output/2D_bandgap4.0 \
-  --pretrained-name=dft_band_gap \
-  --batch_size=20 \
-  --num_batches=3 \
-  --properties_to_condition_on="{'dft_band_gap': 4.0}" \
-  --diffusion_guidance_factor=2.5 \
-  --filter "dimensionality=2D,energy_above_hull<0.1" \
-  --max_atoms 30
-
-  mattergen-generate output/2D_bandgap4.0 \
-  --pretrained-name=dft_band_gap \
-  --batch_size=5 \
-  --num_batches=1 \
-  --properties_to_condition_on="{'dft_band_gap': 4.0}" \
-  --diffusion_guidance_factor=2.5 \
-  --filter "dimensionality=2D,energy_above_hull<0.1" \
-  --max_atoms 30
+mattergen-generate output/bandgap3.5 --pretrained-name=dft_band_gap --batch_size=10 --num_batches=1 --properties_to_condition_on="{'dft_band_gap': 3.5}" --diffusion_guidance_factor=2.2
