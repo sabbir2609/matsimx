@@ -12,7 +12,7 @@ cd mattergen
 
 uv pip install -e .
 
-if faied, try this 
+if faied, try this
 
 UV_HTTP_TIMEOUT=120 uv pip install -e . --link-mode=copy
 
