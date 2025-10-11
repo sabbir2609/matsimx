@@ -101,4 +101,4 @@ mattergen-generate $RESULTS_PATH/Ni-Fe-Mn-O --pretrained-name=chemical_system_en
 # Wide band gap materials
 mattergen-generate output/bandgap4.0b1 --pretrained-name=dft_band_gap --batch_size=20 --num_batches=2 --properties_to_condition_on="{'dft_band_gap': 4.0}" --diffusion_guidance_factor=2.0
 
-mattergen-generate output/bandgap3.5 --pretrained-name=dft_band_gap --batch_size=10 --num_batches=1 --properties_to_condition_on="{'dft_band_gap': 3.5}" --diffusion_guidance_factor=2.2
+mattergen-generate output/bandgap3.5b3 --pretrained-name=dft_band_gap --batch_size=10 --num_batches=1 --properties_to_condition_on="{'dft_band_gap': 3.5}" --diffusion_guidance_factor=2.0
