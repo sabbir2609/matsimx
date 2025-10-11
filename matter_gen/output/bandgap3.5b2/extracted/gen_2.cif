@@ -1,0 +1,33 @@
+data_image0
+_chemical_formula_structural       ScTbF6
+_chemical_formula_sum              "Sc1 Tb1 F6"
+_cell_length_a       5.951122583704797
+_cell_length_b       5.954819829856273
+_cell_length_c       5.95875883102417
+_cell_angle_alpha    60.229085637827
+_cell_angle_beta     60.19621785621923
+_cell_angle_gamma    60.226763354523484
+
+_space_group_name_H-M_alt    "P 1"
+_space_group_IT_number       1
+
+loop_
+  _space_group_symop_operation_xyz
+  'x, y, z'
+
+loop_
+  _atom_site_type_symbol
+  _atom_site_label
+  _atom_site_symmetry_multiplicity
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_occupancy
+  Sc  Sc1       1.0  0.9701483845710756  0.4525192975997925  0.22890368103981018  1.0000
+  Tb  Tb1       1.0  0.47015231847763067  0.9527076482772826  0.7287514805793762  1.0000
+  F   F1        1.0  0.21034444868564606  0.2123613655567169  0.9886794090270995  1.0000
+  F   F2        1.0  0.2106661647558212  0.692711591720581  0.9889982938766478  1.0000
+  F   F3        1.0  0.7303095459938049  0.6927259564399719  0.9885169863700866  1.0000
+  F   F4        1.0  0.20951750874519348  0.2126445770263672  0.4692183434963226  1.0000
+  F   F5        1.0  0.7301793098449707  0.69244247674942  0.4691306054592132  1.0000
+  F   F6        1.0  0.7302228808403015  0.21232499182224274  0.4686028659343719  1.0000
