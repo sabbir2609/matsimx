@@ -24,4 +24,3 @@ export RESULTS_PATH=results/
 export OUTPUT_PATH="output/"
 
 mattergen-generate $RESULTS_PATH --pretrained-name=$MODEL_NAME --batch_size=16 --num_batches 1
-
