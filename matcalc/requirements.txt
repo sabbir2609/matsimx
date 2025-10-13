@@ -3,3 +3,4 @@ crystal-toolkit
 jupyterlab
 ipywidgets
 matgl
+seekpath
