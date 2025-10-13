@@ -1,0 +1,29 @@
+data_image0
+_chemical_formula_structural       OVAgO
+_chemical_formula_sum              "O2 V1 Ag1"
+_cell_length_a       3.0710231202147
+_cell_length_b       3.0742735017962364
+_cell_length_c       6.549983501434326
+_cell_angle_alpha    76.51225765064345
+_cell_angle_beta     76.47732680985625
+_cell_angle_gamma    60.03676450990872
+
+_space_group_name_H-M_alt    "P 1"
+_space_group_IT_number       1
+
+loop_
+  _space_group_symop_operation_xyz
+  'x, y, z'
+
+loop_
+  _atom_site_type_symbol
+  _atom_site_label
+  _atom_site_symmetry_multiplicity
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_occupancy
+  O   O1        1.0  0.46848297119140625  0.7074154615402222  0.42574918270111084  1.0000
+  V   V1        1.0  0.8562551736831665  0.09529973566532136  0.26282986998558044  1.0000
+  Ag  Ag1       1.0  0.35662999749183655  0.59576815366745  0.762374758720398  1.0000
+  O   O2        1.0  0.24381914734840396  0.4823339581489563  0.09967803955078125  1.0000

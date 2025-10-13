@@ -1,0 +1,11 @@
+Folder Structure
+
+matter
+|- output
+|-- batch1
+|--- exreacted
+|---- gen_0.cif
+|-matcalc
+|--output
+|--matcalc.ipynb
+
