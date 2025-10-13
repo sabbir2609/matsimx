@@ -203,3 +203,63 @@ plt.xlabel("Temperature (K)")
 plt.ylabel('Heat Capacity (J/mol-K)')
 plt.title("Heat Capacity vs Temperature")
 plt.show()
+
+
+
+Block 14 :
+
+import yaml
+import numpy as np
+import matplotlib.pyplot as plt
+from pymatgen.core import Structure
+
+def plot_phonon_band(band_yaml_file, structure_file):
+    """
+    Plot phonon dispersion directly from band.yaml (even if 'lattice_rec' is missing).
+    Imaginary frequencies are shown in red.
+    """
+    try:
+        structure = Structure.from_file(structure_file)
+        with open(band_yaml_file, "r") as f:
+            data = yaml.safe_load(f)
+
+        q_labels = [p["label"] if "label" in p else "" for p in data.get("labels", [])]
+        q_distances = []
+        frequencies = []
+
+        # Extract phonon data
+        for point in data["phonon"]:
+            q_distances.append(point["distance"])
+            freqs = [band["frequency"] for band in point["band"]]
+            frequencies.append(freqs)
+
+        q_distances = np.array(q_distances)
+        frequencies = np.array(frequencies)
+
+        # Plot
+        plt.figure(figsize=(10, 6), dpi=300)
+        for i in range(frequencies.shape[1]):
+            freq_branch = frequencies[:, i]
+            plt.plot(q_distances, freq_branch,
+                     color="red" if np.any(freq_branch < 0) else "black", lw=1.2)
+
+        plt.axhline(0, color="gray", lw=0.8)
+        plt.xlabel("Wave vector path")
+        plt.ylabel("Frequency (THz)")
+        plt.title("Phonon Band Structure")
+        plt.grid(alpha=0.2)
+        plt.show()
+
+        min_freq = np.min(frequencies)
+        if min_freq < 0:
+            print(f"❌ Imaginary frequencies detected (min = {min_freq:.3f} THz). Material unstable.")
+        else:
+            print(f"✅ All frequencies positive (min = {min_freq:.3f} THz). Material stable.")
+
+    except Exception as e:
+        print(f"⚠️ Error while plotting phonon band: {e}")
+
+band_file = f"output/{output_dir}/r2scan_phonon_bs.yaml"
+structure_file = f"output/{output_dir}/POSCAR_r2scan"
+
+plot_phonon_band(band_file, structure_file)

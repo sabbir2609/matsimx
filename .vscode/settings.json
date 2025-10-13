@@ -4,6 +4,7 @@
         "expt",
         "figsize",
         "matcalc",
+        "poscar",
         "pymatgen",
         "Spacegroup"
     ],
