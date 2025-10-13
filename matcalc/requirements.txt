@@ -1,0 +1,5 @@
+matcalc
+crystal-toolkit
+jupyterlab
+ipywidgets
+matgl

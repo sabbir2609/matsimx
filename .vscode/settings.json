@@ -3,6 +3,7 @@
         "bandgap",
         "expt",
         "figsize",
+        "jupyterlab",
         "matcalc",
         "poscar",
         "pymatgen",
