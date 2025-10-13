@@ -1,0 +1,19 @@
+{
+  "iterations": 1000,
+  "sublattice_mode": "split",
+  "structure": {
+    "file": "Zn(FeO2)2_fd_relaxed.pymatgen.json",
+    "supercell": [
+      5,
+      1,
+      1
+    ]
+  },
+  "composition": [
+    {
+      "sites": "Zn",
+      "Mn": 8,
+      "Zn": 32
+    }
+  ]
+}

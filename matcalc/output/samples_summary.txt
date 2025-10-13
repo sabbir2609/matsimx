@@ -1,2 +1,3 @@
 gen_6	TiH2O3	P1 (#1)	unstable
 gen_7	InF3	R-3c (#167)	unstable
+Fe2CoO4	Fe2CoO4	Fd-3m (#227)	stable
